@@ -13,11 +13,9 @@ class Dice:
         return self.history[-1*num_rolls:]
 
 if __name__ == '__main__':
-    d4 = Dice(4)
-    d20 = Dice(20)
-    print(d4.roll(12))
-    print(d20.roll(12))
-    print(d4.roll())
-    print(d20.roll())
-    print(d4.history)
-    print(d20.history)
+    d = {4: Dice(4), 6: Dice(6), 8: Dice(8),
+         10: Dice(10), 12: Dice(12), 20: Dice(20)}
+    for x in d.keys():
+        print(d[x].roll())
+        print(d[x].roll(2))
+        print(d[x].history)
