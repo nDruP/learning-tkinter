@@ -26,15 +26,14 @@ bg_canvas.pack()
 
 dice_frame = tk.Frame(root)
 dice_frame.pack()
-    
-num_rolls = tk.Spinbox(dice_frame, from_=1, to=50)
-num_rolls.grid(row=1)
 
 dice_roll = tk.Button(dice_frame)
 dice_roll["text"] = "Roll"
 dice_roll["command"] = lambda: roll_check(4, num_rolls.get())
 dice_roll.grid(row=0)
 
+num_rolls = tk.Spinbox(dice_frame, from_=1, to=50)
+num_rolls.grid(row=1)
 
 dice_hist = tk.Label(dice_frame)
 dice_hist["text"] = "wow"
